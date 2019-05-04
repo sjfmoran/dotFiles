@@ -84,43 +84,45 @@ URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
-! URxvt*shading:                  138
+ URxvt*inheritPixmap:            true
+ URxvt*transparent:              true
+ URxvt*shading:                  25
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
 URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
 URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
 
+!----------------------------------------
 ! Config Tabs
-URxvt.perl-ext-common:  default,tabbed
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    3
-URxvt.tabbed.tab-bg:    0
-XTerm.color0: #000000
-XTerm.color2: #aece92
-XTerm.color3: #968a38
-
-!! Perl extension config
-!URxvt.perl-ext-common: default
-!URxvt.perl-ext: tabbed
+!URxvt.perl-ext-common:  default,tabbed
+!URxvt.tabbed.tabbar-fg: 2
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg:    3
+!URxvt.tabbed.tab-bg:    0
+!XTerm.color0: #000000
+!XTerm.color2: #aece92
+!XTerm.color3: #968a38
+!----------------------------------------
+!
+! Perl extension config
+URxvt.perl-ext-common: default
+URxvt.perl-ext: tabbed
 !! Any scripts placed here will override global ones with the same name
-!URxvt.perl-lib: /home/sfmoran/.urxvt/
+URxvt.perl-lib: ~/.urxvt/
 
 !! Tabbed extension configuration
-!URxvt.tabbed.tabbar-fg: 8
-!URxvt.tabbed.tabbar-bg: 0
-!URxvt.tabbed.tab-fg:    15
-!URxvt.tabbed.tab-bg:    8
-!URxvt.tabbed.new-button: false
-!
-!URxvt.session: N|M|R
-!URxvt.tabbed.tabcmds.1: N|/usr/bin/vim
-!URxvt.tabbed.tabcmds.2: R|root|su -
-!URxvt.tabbed.tabcmds.3: M|shell
-
+URxvt.tabbed.tabbar-fg: 8
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    15
+URxvt.tabbed.tab-bg:    4
+URxvt.tabbed.new-button: false
+URxvt.session: M|R|N
+URxvt.tabbed.tabcmds.1: N|vim|vim
+URxvt.tabbed.tabcmds.2: R|tmux|tmux
+URxvt.tabbed.tabcmds.3: M|shell
+!URxvt.tabbed.tabcmds.4: A|root|su -
+!----------------------------------------
 
 !Xterm escape codes, word by word movement
 URxvt.keysym.Control-Left:        \033[1;5D
