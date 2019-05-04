@@ -120,7 +120,7 @@ URxvt.tabbed.new-button: false
 URxvt.session: M|R|N
 URxvt.tabbed.tabcmds.1: N|vim|vim
 URxvt.tabbed.tabcmds.2: R|tmux|tmux
-URxvt.tabbed.tabcmds.3: M|shell
+URxvt.tabbed.tabcmds.3: M|ranger|ranger
 !URxvt.tabbed.tabcmds.4: A|root|su -
 !----------------------------------------
 
